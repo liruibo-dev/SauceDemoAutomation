@@ -37,3 +37,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+### 测试产物（可重新生成，不进版本库）
+test-output/
