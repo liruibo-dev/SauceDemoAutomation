@@ -6,18 +6,19 @@
 - Java 17
 - Selenium WebDriver 4.27
 - TestNG 7.10
-- Maven（阿里云镜像加速）
+- Maven
 - ExtentReports 5.1.1
 - Page Object 设计模式
 
 ## 项目结构
 ```
-SauceDemoTest/
+SauceDemoAutomation/
 ├── pom.xml
 ├── README.md
 ├── src/
 │   ├── main/java/com/test/
-│   │   └── FirstScript.java
+│   │   ├── FirstScript.java
+│   │   └── Main.java
 │   └── test/java/com/test/
 │       ├── BaseTest.java
 │       ├── LoginTest.java
@@ -32,12 +33,14 @@ SauceDemoTest/
     ├── ExtentReport.html
     └── screenshots/
 ```
+`test-output/`（HTML 测试报告与失败截图）在测试运行后生成，未纳入版本控制。
+
 ## 运行方式
-1. 确保已安装 JDK 17、Maven 3.9+、Chrome 浏览器
-2. 克隆项目：`git clone https://github.com/li-auto-test/SauceDemoAutomation.git`
-3. 配置 ChromeDriver：将 `chromedriver.exe` 放入 `C:\Users\你的用户名\chromedriver\` 目录
-4. 运行：在 IDEA 中右键 `LoginTest.java` → Run
-5. 查看报告：打开 `test-output/ExtentReport.html`
+1. 前置条件：JDK 17、Maven 3.9+、Chrome 浏览器
+2. 克隆项目：`git clone https://github.com/liruibo-dev/SauceDemoAutomation.git`
+3. 运行：在 IDEA 中右键 `LoginTest.java` → Run
+   （无需手动配置 ChromeDriver，Selenium Manager 会自动下载）
+4. 查看报告：打开 `test-output/ExtentReport.html`
 
 ## 测试用例
 | 编号 | 场景 | 数据 |

@@ -13,8 +13,6 @@ public class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver",
-                "C:\\Users\\li\\chromedriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
     }
