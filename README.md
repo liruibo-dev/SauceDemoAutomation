@@ -15,23 +15,17 @@
 SauceDemoAutomation/
 ├── pom.xml
 ├── README.md
-├── src/
-│   ├── main/java/com/test/
-│   │   ├── FirstScript.java
-│   │   └── Main.java
-│   └── test/java/com/test/
-│       ├── BaseTest.java
-│       ├── LoginTest.java
-│       ├── pages/
-│       │   ├── BasePage.java
-│       │   ├── LoginPage.java
-│       │   └── InventoryPage.java
-│       └── utils/
-│           ├── ExtentManager.java
-│           └── TestListener.java
-└── test-output/
-    ├── ExtentReport.html
-    └── screenshots/
+└── src/
+    └── test/java/com/test/
+        ├── BaseTest.java            测试基类：驱动初始化与销毁、监听器挂载
+        ├── LoginTest.java           登录模块测试用例
+        ├── pages/
+        │   ├── BasePage.java        页面对象基类
+        │   ├── LoginPage.java       登录页元素与操作
+        │   └── InventoryPage.java   商品列表页元素与操作
+        └── utils/
+            ├── ExtentManager.java   报告实例管理
+            └── TestListener.java    用例监听：失败自动截图
 ```
 `test-output/`（HTML 测试报告与失败截图）在测试运行后生成，未纳入版本控制。
 
